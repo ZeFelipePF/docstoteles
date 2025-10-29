@@ -1,0 +1,6 @@
+firecrawl
+langchain
+langchain_community
+langchain_groq
+python-dotenv
+streamlit
