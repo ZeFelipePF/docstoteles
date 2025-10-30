@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 from presentation.scraping import show as show_scraping
+from presentation.chat import show as show_chat
 
 st.set_page_config(page_title="DocstoTeles", page_icon="📄", layout='wide')
 st.title("DocstoTeles 📄")
@@ -33,3 +34,5 @@ if 'collection' not in st.session_state:
 
 if mode == 'Scrapping':
     show_scraping()
+elif mode == 'Chat':
+    show_chat()

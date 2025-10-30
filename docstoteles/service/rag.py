@@ -1,12 +1,12 @@
 import os
 from dotenv import load_dotenv
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_groq import ChatGroq
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
+from langchain_classic.chains import RetrievalQA
+from langchain_core.prompts import PromptTemplate
 
 class RAGService:
     def __init__(self):
@@ -16,7 +16,7 @@ class RAGService:
 
         self.llm = ChatGroq(
             groq_api_key=os.getenv("GROQ_API_KEY"),
-            model_name="llama3-8b-8192"
+            model_name="groq/compound"
         )
 
         self.text_splitter = RecursiveCharacterTextSplitter(
@@ -75,8 +75,8 @@ class RAGService:
             return "No collection loaded."
 
         try:
-            result = self.qa_chain.run(question)
-            return result
+            response = self.qa_chain.invoke({"query": question})
+            return response["result"]
         except Exception as e:
             return f"Error occurred: {str(e)}"
 
