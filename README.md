@@ -58,10 +58,6 @@ python -m venv venv
 
 ```powershell
 python -m pip install --upgrade pip
-# Use o arquivo completo de dependências gerado: `requirements-full.txt`.
-# O arquivo `requirements.txt` original pode ser uma versão mínima; prefira o
-# `requirements-full.txt` para obter todas as dependências usadas neste projeto.
-python -m pip install -r requirements-full.txt
 ```
 
 4. Pacotes adicionais frequentemente necessários (se não já no requirements):
