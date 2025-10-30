@@ -1,6 +1,48 @@
+﻿## Dependências do projeto (padrão pip)
+
+streamlit>=1.20.0
+python-dotenv>=0.21.0
+sentence-transformers==5.1.2
+torch==2.9.0
+transformers==4.57.1
+huggingface-hub==0.36.0
+faiss-cpu
+
+# LangChain-related packages (algumas são pacotes separados)
+langchain>=1.0.0
+langchain-huggingface==1.0.0
+langchain-community
+langchain-groq
+langchain-classic
+langchain-text-splitters
+
+# Scraping / integrações
 firecrawl
-langchain
-langchain_community
-langchain_groq
-python-dotenv
-streamlit
+
+# Observação: alguns pacotes (como faiss-cpu) podem precisar de versões de Python específicas
+# ou de instalação via binários pré-compilados no Windows. Se tiver GPU/CUDA compatível, pode
+# substituir faiss-cpu por faiss-gpu.
+
+# Se preferir um arquivo com comentários reduzidos, use `requirements-full.txt`.
+
+streamlit>=1.20.0
+python-dotenv>=0.21.0
+sentence-transformers==5.1.2
+torch==2.9.0
+transformers==4.57.1
+huggingface-hub==0.36.0
+faiss-cpu
+
+# LangChain and related packages (algumas são distribuições separadas)
+langchain>=1.0.0
+langchain-huggingface==1.0.0
+langchain-community
+langchain-groq
+langchain-classic
+langchain-text-splitters
+
+# Scraping / integrações
+firecrawl
+
+# Observação: alguns pacotes (como faiss-cpu) podem precisar de versões de Python específicas
+# ou de instalação via binários pré-compilados no Windows. Se tiver GPU/CUDA compatível, pode
