@@ -17,6 +17,16 @@ Main components:
 - Create embeddings with HuggingFace (`sentence-transformers`) and store them with FAISS.
 - Ask questions (chat) with context retrieval (RetrievalQA).
 
+## Technologies
+
+- Streamlit — web UI and rapid prototyping.
+- LangChain (`langchain-core`, `langchain-community`, `langchain-huggingface`) — RAG orchestration.
+- HuggingFace / sentence-transformers — embedding generation (model `all-MiniLM-L6-v2`).
+- FAISS — local vector indexing and search.
+- Firecrawl — scraping/ingestion integration (optional API used by the scrapping service).
+- Groq (`langchain-groq`) — LLM provider used for generation.
+- Python 3.11+ — recommended runtime.
+
 ## Requirements
 
 - Python 3.11+ (tested with 3.13 in a local venv).
@@ -88,6 +98,3 @@ Open http://localhost:8501 in your browser.
 
 ---
 
-If you want, I can also:
-- update `requirements.txt` with tested pins,
-- add an example collection in `data/collections/example` with sample .md files.

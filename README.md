@@ -17,6 +17,16 @@ Principais componentes:
 - Gerar embeddings com HuggingFace (`sentence-transformers`) e armazená-los com FAISS.
 - Fazer perguntas (chat) com recuperação de contexto (RetrievalQA).
 
+## Tecnologias
+
+- Streamlit — interface web e UI rápida para protótipos.
+- LangChain (`langchain-core`, `langchain-community`, `langchain-huggingface`) — orquestração do fluxo RAG.
+- HuggingFace / sentence-transformers — geração de embeddings (modelo `all-MiniLM-L6-v2`).
+- FAISS — indexação e busca vetorial local.
+- Firecrawl — ferramenta/integração para scraping e ingestão de conteúdos (API opcional usada pelo serviço de scrapping).
+- Groq (`langchain-groq`) — provedor de modelos LLM para geração de respostas.
+- Python 3.11+ — runtime recomendado.
+
 ## Requisitos
 
 - Python 3.11+ (o projeto foi testado com 3.13 em um venv local).
@@ -147,18 +157,5 @@ python -c "import sentence_transformers, faiss; print('OK')"
 
 1. Fork e branch com feature/bugfix.
 2. Abra um Pull Request descrevendo mudanças.
-
-## Licença
-
-Escolha e adicione a sua licença (ex.: MIT) se desejar publicar o repositório.
-
----
-
-Se quiser, eu posso:
-- Atualizar o `requirements.txt` com versões testadas.
-- Adicionar um `README` em inglês também.
-- Incluir um exemplo de coleção em `data/collections/example` com alguns `.md` de teste.
-
-Diga qual desses extras você quer que eu faça agora.
 
 # docstoteles
